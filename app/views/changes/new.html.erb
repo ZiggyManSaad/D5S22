@@ -5,6 +5,8 @@
       
       <div class="well">
         <%= form_for "/changes" do |f| %>
+        <% @team_array = [ ['Administration Department (301810)'], ['Arthrex (301233)'], [ 'Finance Department (301820)'], [ 'Flexibles (301250)'], [ 'Hologic (301260)'], [ 'Human Resources (301840)'], [ 'IT Department (301850)'], [ 'Maintenance (301919)'], [ 'Materials (301110)'], [ 'Process Engineering (301350)'], [ 'Production Overhead (301310)'], [ 'Production Services (301290)'], [ 'Quality Department (301340)'], [ 'Sales & Marketing (301720)'], [ 'Shipping (301740)'], [ 'SNE New (301221)'], [ 'SNE Team 2 (301222)'], [ 'Stryker Team 1 (301211)'], [ 'Stryker Team 2 (301212)'], [ 'Stryker Team 3 (301231)'], [ 'Thermohauser (680680)'], [ 'Thermohauser (700700)'], [ 'Vet. Syringe (301730)'], [ 'Vetline (301240)'] ] %>
+        <% @position_array = [ ['Couplers'], [ 'Disassembler'], [ 'Inner Tubes'], [ 'Outer Tubes'], [ 'Welding'] ] %>
           <div class="form-group">
               <%= f.label :name %>
               <%= f.text_field :name, class: 'form-control' %>
@@ -21,25 +23,26 @@
               <%= f.label :ADP, "ADP" %>
               <%= f.text_field :ADP, class: 'form-control'  %>
           </div>
+          
           <div class="form-group">
               <%= f.label :typeCOE, "Type of COE" %>
-              <%= f.text_field :typeCOE, class: 'form-control'  %>
+              <%= f.select :typeCOE, ['New Hire', 'Transfer', 'Termination'], include_blank: true, class: 'form-control'  %>
           </div>
           <div class="form-group">
               <%= f.label :fromTeam, "From Team" %>
-              <%= f.text_field :fromTeam, class: 'form-control'  %>
+              <%= f.select :fromTeam, @team_array, include_blank: true, class: 'form-control'  %>
           </div>
           <div class="form-group">
               <%= f.label :fromPos, "From Position" %>
-              <%= f.text_field :fromPos, class: 'form-control'  %>
+              <%= f.select :fromPos, @position_array, include_blank: true, class: 'form-control'  %>
           </div>
           <div class="form-group">
               <%= f.label :toTeam, "To Team" %>
-              <%= f.text_field :toTeam, class: 'form-control'  %>
+              <%= f.select :toTeam, @team_array, include_blank: true, class: 'form-control'  %>
           </div>
           <div class="form-group">
               <%= f.label :toPos, "To Position" %>
-              <%= f.text_field :toPos, class: 'form-control'  %>
+              <%= f.select :toPos, @position_array, include_blank: true, class: 'form-control'  %>
           </div>
           <div class="form-group">
               <%= f.label :teamLead, "Team Lead" %>

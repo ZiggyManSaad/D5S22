@@ -1,0 +1,181 @@
+<div class="container">
+  <div class="row">
+    <h3 class="text-center">Change Of Employment</h3>
+    <div class="col-md-4 col-md-offset-4">
+      
+      <div class="well">
+        <%= form_for @change do |f| %>
+          <div class="form-group">
+              <%= f.label :name %>
+              <%= f.text_field :name, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+              <%= f.label :dateToday %>
+              <%= f.text_field :dateToday, class: 'form-control'  %>
+          </div>
+          <div class="form-group">
+              <%= f.label :dateCOE %>
+              <%= f.text_field :DateCOE, class: 'form-control'  %>
+          </div>
+          <div class="form-group">
+              <%= f.label :ADP %>
+              <%= f.text_field :ADP, class: 'form-control'  %>
+          </div>
+          <div class="form-group">
+              <%= f.label :typeCOE %>
+              <%= f.text_field :typeCOE, class: 'form-control'  %>
+          </div>
+          <div class="form-group">
+              <%= f.label :fromTeam %>
+              <%= f.text_field :fromTeam, class: 'form-control'  %>
+          </div>
+          <div class="form-group">
+              <%= f.label :fromPos %>
+              <%= f.text_field :fromPos, class: 'form-control'  %>
+          </div>
+          <div class="form-group">
+              <%= f.label :toTeam %>
+              <%= f.text_field :toTeam, class: 'form-control'  %>
+          </div>
+          <div class="form-group">
+              <%= f.label :toPos %>
+              <%= f.text_field :toPos, class: 'form-control'  %>
+          </div>
+          <div class="form-group">
+              <%= f.label :teamLead %>
+              <%= f.text_field :teamLead, class: 'form-control'  %>
+          </div>
+          <div class="form-group">
+              <%= f.label :access %>
+              <%= f.text_field :access, class: 'form-control'  %>
+          </div>
+          <div class="form-group">
+              <%= f.label :equipment %>
+              <%= f.text_field :equipment, class: 'form-control'  %>
+          </div>
+          <!-- Insert HR Checklist boxes here -->
+          <div class="form-group">
+              <%= f.label :empStatusEmail %>
+              <%= check_box_tag(:empStatusEmail) %>
+          </div>
+          <div class="form-group">
+              <%= f.label :tlList %>
+              <%= check_box_tag(:tlList) %>
+          </div>
+          <div class="form-group">
+              <%= f.label :ADPComplete %>
+              <%= check_box_tag(:ADPComplete) %>
+          </div>
+          <div class="form-group">
+              <%= f.label :ITticket %>
+              <%= check_box_tag(:ITticket) %>
+          </div>
+          <div class="form-group">
+              <%= f.label :employeeFile %>
+              <%= check_box_tag(:employeeFile) %>
+          </div>
+          <div class="form-group">
+              <%= f.label :bonus %>
+              <%= check_box_tag(:bonus) %>
+          </div>
+          <div class="form-group">
+              <%= f.label :drugTestRCVD %>
+              <%= check_box_tag(:drugTestRCVD) %>
+          </div>
+          <div class="form-group">
+              <%= f.label :review %>
+              <%= check_box_tag(:review) %>
+          </div>
+          <div class="form-group">
+              <%= f.label :retire401k %>
+              <%= check_box_tag(:retire401k) %>
+          </div>
+          <div class="form-group">
+              <%= f.label :ultraBen %>
+              <%= check_box_tag(:ultraBen) %>
+          </div>
+          <div class="form-group">
+              <%= f.label :hsaBank %>
+              <%= check_box_tag(:hsaBank) %>
+          </div>
+          <div class="form-group">
+              <%= f.label :lincoln %>
+              <%= check_box_tag(:lincoln) %>
+          </div>
+          <div class="form-group">
+              <%= f.label :colonialLife %>
+              <%= check_box_tag(:colonialLife) %>
+          </div>
+          <div class="form-group">
+              <%= f.label :ncsRCVD %>
+              <%= check_box_tag(:ncsRCVD) %>
+          </div>
+          <div class="form-group">
+              <%= f.label :sapSubmit %>
+              <%= check_box_tag(:sapSubmit) %>
+          </div>
+          <div class="form-group">
+              <%= f.label :empContact %>
+              <%= check_box_tag(:empContact) %>
+          </div>
+          <div class="form-group">
+              <%= f.label :taxForm %>
+              <%= check_box_tag(:taxForm) %>
+          </div>
+          <div class="form-group">
+              <%= f.label :vehicleInfo %>
+              <%= check_box_tag(:vehicleInfo) %>
+          </div>
+          <div class="form-group">
+              <%= f.label :eeo1Form %>
+              <%= check_box_tag(:eeo1Form) %>
+          </div>
+          <div class="form-group">
+              <%= f.label :disability %>
+              <%= check_box_tag(:disability) %>
+          </div>
+          <div class="form-group">
+              <%= f.label :aap %>
+              <%= check_box_tag(:aap) %>
+          </div>
+          <div class="form-group">
+              <%= f.label :labCoat %>
+              <%= check_box_tag(:labCoat) %>
+          </div>
+          <div class="form-group">
+              <%= f.label :locker %>
+              <%= check_box_tag(:locker) %>
+          </div>
+          <div class="form-group">
+              <%= f.label :trainingPapers %>
+              <%= check_box_tag(:trainingPapers) %>
+          </div>
+          <div class="form-group">
+              <%= f.label :emergencyList %>
+              <%= check_box_tag(:emergencyList) %>
+          </div>
+          <div class="form-group">
+              <%= f.label :doorSystem %>
+              <%= check_box_tag(:doorSystem) %>
+          </div>
+          <div class="form-group">
+              <%= f.label :badge %>
+              <%= check_box_tag(:badge) %>
+          </div>
+          <div class="form-group">
+              <%= f.label :traineeLog %>
+              <%= check_box_tag(:traineeLog) %>
+          </div>
+          
+          <!-- Completed By -->
+          <div class="form-group">
+              <%= f.label :completedBy %>
+              <%= f.text_field :completedBy, class: 'form-control'  %>
+          </div>
+      
+          <%= f.submit 'Submit', class: 'btn btn-default' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

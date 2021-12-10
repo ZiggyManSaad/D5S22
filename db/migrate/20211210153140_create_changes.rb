@@ -1,18 +1,24 @@
-class CreateChangeOfEmployment < ActiveRecord::Migration[5.0]
+class CreateChanges < ActiveRecord::Migration[5.0]
   def change
-    create_table :change_of_employments do |t|
+    create_table :changes do |t|
       t.string :name
-      t.timestamps
+      t.string :dateToday
       t.string :dateCOE
       t.string :ADP
-      t.text :typeCOE
+      t.string :typeCOE
       t.string :fromTeam
       t.string :fromPos
       t.string :toTeam
       t.string :toPos
       t.string :teamLead
-      t.text :access
-      t.string :access
+      t.string :activedirectoy
+      t.string :email
+      t.string :SAPaccess
+      t.string :toolsfixtures
+      t.string :desktop
+      t.string :Laptop
+      t.string :deskphone
+      t.string :cellphone
       t.string :empStatusEmail
       t.string :tlList
       t.string :ADPComplete
@@ -38,10 +44,10 @@ class CreateChangeOfEmployment < ActiveRecord::Migration[5.0]
       t.string :locker
       t.string :trainingPapers
       t.string :emergencyList
-      t.string :doorSystem
       t.string :badge
       t.string :traineeLog
       t.string :completedBy
+      t.timestamps
     end
   end
 end

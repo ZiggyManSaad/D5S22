@@ -4,5 +4,5 @@ Rails.application.routes.draw do
     get 'about', to: 'pages#about'
     
     resources :changes, only: [:create]
-    get 'ChangeOfEmployment', to: 'changes#new', as: 'new_changes'
+    get 'ChangeOfEmployment', to: 'changes#new', as: 'new_change'
 end

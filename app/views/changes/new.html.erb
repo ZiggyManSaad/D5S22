@@ -4,16 +4,18 @@
     <div class="col-lg-8 col-md-offset-2">
       
       <div class="well">
-        <%= form_for "/changes" do |f| %>
+        <%= form_for @change do |f| %>
+        
         <% @team_array = [ ['Administration Department (301810)'], ['Arthrex (301233)'], [ 'Finance Department (301820)'], [ 'Flexibles (301250)'], [ 'Hologic (301260)'], [ 'Human Resources (301840)'], [ 'IT Department (301850)'], [ 'Maintenance (301919)'], [ 'Materials (301110)'], [ 'Process Engineering (301350)'], [ 'Production Overhead (301310)'], [ 'Production Services (301290)'], [ 'Quality Department (301340)'], [ 'Sales & Marketing (301720)'], [ 'Shipping (301740)'], [ 'SNE New (301221)'], [ 'SNE Team 2 (301222)'], [ 'Stryker Team 1 (301211)'], [ 'Stryker Team 2 (301212)'], [ 'Stryker Team 3 (301231)'], [ 'Thermohauser (680680)'], [ 'Thermohauser (700700)'], [ 'Vet. Syringe (301730)'], [ 'Vetline (301240)'] ] %>
-        <% @position_array = [ ['Couplers'], [ 'Disassembler'], [ 'Inner Tubes'], [ 'Outer Tubes'], [ 'Welding'] ] %>
+        <% @position_array = [ ['Accounting & Customer Service Support'], ['Accounting Manager'], ['Buyer/ Planner'], ['CNC Programmer-Tool & Fix Coord'], ['Couplers'], ['Customer Service Supervisor'], ['Data Entry'], ['Deputy'], ['Deputy- Finalist'], ['Deputy- Stockroom'], ['Director of Finance And Controlling'], ['Director of Production'], ['Director Of Quality, ASQ CQE & CMQ/OE'], ['Director Of Sales & Customer Service'], ['Disassembler/Allocator'], ['Engineering Intern'], ['Engineering Manager'], ['Eval'], ['Evaluation Assistant Coordinator'], ['Final QC Inspector'], ['Finalist'], ['Human Resources Coordinator'], ['Human Resources Generalist'], ['Human Resources Manager'], ['Inner Tubes'], ['Inner Tubes Coordinator'], ['Inner Tubes/Final'], ['IT Manager'], ['IT Support Specialist'], ['Janitor'], ['Lead Design Engineer'], ['Logistics Flow Team Member'], ['Machinist Intern'], ['Maintenance Manager & Safety Officer'], ['Maintenance Technician'], ['Maintenance Technician/Facilities'], ['Mechanical Designer'], ['OT Coordinator'], ['Outer Tubes'], ['Process Development Tech/Trainer TL'], ['Process Development Technician'], ['Production Scheduler & Metrics Analyst'], ['Quality Assurance Coordinator'], ['Quality Control Coordinator'], ['Quality Technician'], ['Receptionist'], ['Salvage'], ['Senior Assembly Technician'], ['Stockroom Clerk'], ['Team Deputy- Logistics Flow'], ['Team Leader'], ['Teamleader- Finalist'], ['Teamleader- Logistics Flow'], ['Teamleader- Salvage'], ['Teamleader- Stockroom Clerk'], ['Teamleader- Welding'], ['Tool Crib Attendant'], ['Tooling & Fixtures Maintenance Tech'], ['Vice President Of Operations'], ['VP of Sales'], ['Welder'] ] %>
+        
           <div class="form-group">
               <%= f.label :name %>
               <%= f.text_field :name, class: 'form-control' %>
           </div>
           <div class="form-group">
               <%= f.label :dateToday, "Today's Date" %>
-              <%= f.date_field :Today, class: 'form-control'  %>
+              <%= f.date_field :dateToday, class: 'form-control'  %>
           </div>
           <div class="form-group">
               <%= f.label :dateCOE, "Date of COE" %>
@@ -77,95 +79,129 @@
               &ensp;
               <%= check_box_tag(:cellphone) %>
               <%= f.label :cellphone, "Cell Phone" %>
+              &ensp;
+              <%= check_box_tag(:scanner) %>
+              <%= f.label :scanner, "Scanner" %>
               
           </div>
           <!-- Insert HR Checklist boxes here -->
           <div class="form-group well">
-              <%= f.label :HRChecklist, "HR Checklist" %>
-              <br>
+            <%= f.label :HRChecklist, "HR Checklist", class: 'strong' %>
+            <br>
+            <div class=" checkbox-well wrap">
+              <div class="checkbox">
               <%= check_box_tag(:empStatusEmail) %>
               <%= f.label :empStatusEmail, "Employment Status Email" %>&ensp;
-              
+              </div>
+              <div class="checkbox">
               <%= check_box_tag(:tlList) %>
               <%= f.label :tlList, "TL List" %>&ensp;
-            
+              </div>
+              <div class="checkbox">
               <%= check_box_tag(:ADPComplete) %>
               <%= f.label :ADPComplete, "ADP" %>&ensp;
-            
+              </div>
+              <div class="checkbox">
               <%= check_box_tag(:ITticket) %>
               <%= f.label :ITticket, "IT Ticket submitted" %>&ensp;
-              
+              </div>
+              <div class="checkbox">
               <%= check_box_tag(:employeeFile) %>
               <%= f.label :employeeFile, "Employee File Created" %>&ensp;
-             
+              </div>
+              <div class="checkbox">
               <%= check_box_tag(:bonus) %>
               <%= f.label :bonus, "Bonus" %>&ensp;
-              
+              </div>
+              <div class="checkbox">
               <%= check_box_tag(:drugTestRCVD) %>
               <%= f.label :drugTestRCVD, "Drug Test RCVD" %>&ensp;
-              
+              </div>
+              <div class="checkbox">
               <%= check_box_tag(:review) %>
               <%= f.label :review, "Review" %>&ensp;
-              
+              </div>
+              <div class="checkbox">
               <%= check_box_tag(:retire401k) %>
               <%= f.label :retire401k, "401K Paperwork" %>&ensp;
-              
+              </div>
+              <div class="checkbox">
               <%= check_box_tag(:ultraBen) %>
               <%= f.label :ultraBen, "Ultra Ben" %>&ensp;
-              
+              </div>
+              <div class="checkbox">
               <%= check_box_tag(:hsaBank) %>
               <%= f.label :hsaBank, "HSA Bank" %>&ensp;
-              
+              </div>
+              <div class="checkbox">
               <%= check_box_tag(:lincoln) %>
               <%= f.label :lincoln, "Lincoln" %>&ensp;
-              
+              </div>
+              <div class="checkbox">
               <%= check_box_tag(:colonialLife) %>
               <%= f.label :colonialLife, "Colonial Life" %>&ensp;
-              
+              </div>
+              <div class="checkbox">
               <%= check_box_tag(:ncsRCVD) %>
               <%= f.label :ncsRCVD, "NCS RCVD" %>&ensp;
-              
+              </div>
+              <div class="checkbox">
               <%= check_box_tag(:sapSubmit) %>
               <%= f.label :sapSubmit, "SAP App Submitted" %>&ensp;
-              
+              </div>
+              <div class="checkbox">
               <%= check_box_tag(:empContact) %>
               <%= f.label :empContact, "Employee Contact Info" %>&ensp;
-              
+              </div>
+              <div class="checkbox">
               <%= check_box_tag(:taxForm) %>
               <%= f.label :taxForm, "Tax Info" %>&ensp;
-              
+              </div>
+              <div class="checkbox">
               <%= check_box_tag(:vehicleInfo) %>
               <%= f.label :vehicleInfo, "Vehicle Info" %>&ensp;
-              
+              </div>
+              <div class="checkbox">
               <%= check_box_tag(:eeo1Form) %>
               <%= f.label :eeo1Form, "EEO-1 Form" %>&ensp;
-              
+              </div>
+              <div class="checkbox">
               <%= check_box_tag(:disability) %>
               <%= f.label :disability, "Disability Self ID" %>&ensp;
-              
+              </div>
+              <div class="checkbox">
               <%= check_box_tag(:aap) %>
               <%= f.label :aap, "AAP" %>&ensp;
-              
+              </div>
+              <div class="checkbox">
               <%= check_box_tag(:labCoat) %>
               <%= f.label :labCoat, "Lab Coat Assigned" %>&ensp;
-              
+              </div>
+              <div class="checkbox">
               <%= check_box_tag(:locker) %>
               <%= f.label :locker, "Locker Assigned" %>&ensp;
-              
+              </div>
+              <div class="checkbox">
               <%= check_box_tag(:trainingPapers) %>
               <%= f.label :trainingPapers, "Training Papers" %>&ensp;
-              
+              </div>
+              <div class="checkbox">
               <%= check_box_tag(:emergencyList) %>
               <%= f.label :emergencyList, "Emergency Contact List" %>&ensp;
-              
+              </div>
+              <div class="checkbox">
               <%= check_box_tag(:doorSystem) %>
               <%= f.label :doorSystem, "Door System" %>&ensp;
-              
+              </div>
+              <div class="checkbox">
               <%= check_box_tag(:badge) %>
               <%= f.label :badge, "ID Badge Printed" %>&ensp;
-              
+              </div>
+              <div class="checkbox">
               <%= check_box_tag(:traineeLog) %>
               <%= f.label :traineeLog, "Trainee Log" %>
+              </div>
+            </div>
           </div>
           
           <!-- Completed By -->

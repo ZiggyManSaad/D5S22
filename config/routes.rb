@@ -3,6 +3,6 @@ Rails.application.routes.draw do
     
     get 'about', to: 'pages#about'
     
-    resources :change_of_employment, only: [:create]
-    get 'ChangeOfEmployment', to: 'change_of_employment#new', as: 'new_change'
+    resources :changes, only: [:create]
+    get 'ChangeOfEmployment', to: 'changes#new', as: 'new_changes'
 end

@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="row">
+    <h3 class="text-center"><strong>SAP Order Form</strong></h3>
+    <div class="col-lg-8 col-md-offset-2">
+      <div class="well">
+        <%= form_for @orderForm do |f| %>
+        <% @matGroup = ['410200 = Paint, Varnish', '410201 = Epoxies', '410301 = Lubricants', '410304 = Abrasive', '410307 = Argon/Nitrogen', '410310 = Q-tips', '410400 = Small tools under $1,000 (Production Services)', '450104 = Maintenance machines', '470102 = Other Office Supplies', '470106 = IT Supplies'] %>
+        <% @costGroup = ['3012900 = Nitrogen  (For Mat\'l Group 410307)','3012900 = Paint, varnish (For Mat\'l Group 410200)', '3012900 = Production Services (Tooling, Fixturing, etc.) (w/ Mat\'l Group 410400)', '3012900 = Q-tips (For Mat\'l Group 410310)', '3018100 = Other Office Supplies  (For Mat\'l Group 470102)', '3019190 = Maintenance machines  (For Mat\'l Group 450104)', '3012900 = Lubricants (For Mat\'l Group 410301)', '3018500 = IT supplies (For Mat\'l Group 470106)', '3012900 = Epoxies (For Mat\'l Group 410201)', '3012900 = Abrasive  (For Mat\'l Group 410304)'] %>
+        <% @vendors = ['123 Security Products', '8020.net', 'Air Inc.', 'AM Scope', 'Amazon', 'Aquadro Engineering', 'ArcSource', 'Athrex Inc.', 'B&H Photo', 'Beltron', 'Blick Art Material', 'Brierly Lombard', 'CDW', 'Cermark', 'Cyclone Manufacturing', 'Edmund Optics', 'Excell Solutions', 'Gesswein', 'Global Industrial', 'Grainger', 'Home Depot', 'HSW', 'HSW/Boeing', 'Hyperion', 'Industrial Tool Supply', 'Inlase LLC', 'JBC Tools', 'Jura-Parts.com', 'Laserstar Technologies 5005750', 'Manfrotto Distribution', 'McMaster', 'MEVA Manufacturing', 'Misumi USA', 'MSC', 'NITCO', 'Northeast Bio Tech', 'Northeast Engravers Supply', 'Ohlheiser', 'onlinelabels.com', 'Panacol-USA', 'Powers', 'Praxair', 'Quatro-Air', 'Replacement Parts Industries', 'Seton', 'Sherline', 'Smart Folks', 'Staples', 'Stryker', 'Stuller', 'T&D Specialties', 'Techni-Tool', 'The Mosher Co.', 'Thermo Fisher Scientific', 'TrippNT.com', 'Uline', 'Universal Photonics', 'Vatran Systems', 'Vitec', 'VWR', 'Walmart', 'Whalley', 'www.zoro.com', 'Other'] %>
+        <% @requester = ['Alexander Zegarra', 'Austin Scott', 'Brad Chartier', 'Darren Mello', 'Deborah White', 'Jan Galczak (JG)', 'Jason Slauenwhite', 'Jessica Gauthier', 'Jonathon Mason', 'Randall Hess', 'Ronald Wennerberg', 'Tom Stilwell', 'Tommy Kowalczyk', 'Trevor Lewis'] %>
+        <div class="form-group">
+          <%= f.label :priority, "Priority" %>
+          <%= f.text_field :priority, ['High', 'Low'], include_blank: true, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :partNumber, "Part Number" %>
+          <%= f.text_field :partNumber, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :quantity, "Quantity" %>
+          <%= f.text_field :quantity, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :netPrice, "Net Price (USD)(per unit)" %>
+          <%= f.text_field :priority, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :materialGroup, "Mat'l Group" %>
+          <%= f.text_field :materialGroup, @matGroup, include_blank: true, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :costCenter, "Cost Center/Work Order" %>
+          <%= f.text_field :costCenter, @costGroup, include_blank: true, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :vendor, "Cost Center/Work Order" %>
+          <%= f.text_field :vendor, @vendors, include_blank: true, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :otherVendor, "Other (vendor)" %>
+          <%= f.text_field :otherVendor, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :website, "Website/Link: " %>
+          <%= f.text_field :website, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :projectName, "Project Name (Description)" %>
+          <%= f.text_field :projectName, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :netPrice, "Net Price (USD)(per unit)" %>
+          <%= f.text_field :priority, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :requestFor, "Requested For: " %>
+          <%= f.text_field :requestFor, @requester, include_blank: true, class: 'form-control' %>
+        </div>
+        <%= f.submit 'Submit', class: 'btn btn-default' %>
+        <% end %>
+      </div>
+    </div>  
+  </div>
+</div>

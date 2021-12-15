@@ -10,7 +10,139 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20211210153140) do
+ActiveRecord::Schema.define(version: 20211215131538) do
+
+  create_table "change", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.string   "dateCOE"
+    t.string   "ADP"
+    t.text     "typeCOE"
+    t.string   "fromTeam"
+    t.string   "fromPos"
+    t.string   "toTeam"
+    t.string   "toPos"
+    t.string   "teamLead"
+    t.string   "access"
+    t.string   "empStatusEmail"
+    t.string   "tlList"
+    t.string   "ADPComplete"
+    t.string   "ITticket"
+    t.string   "employeeFile"
+    t.string   "bonus"
+    t.string   "drugTestRCVD"
+    t.string   "review"
+    t.string   "retire401k"
+    t.string   "ultraBen"
+    t.string   "hsaBank"
+    t.string   "lincoln"
+    t.string   "colonialLife"
+    t.string   "ncsRCVD"
+    t.string   "sapSubmit"
+    t.string   "empContact"
+    t.string   "taxForm"
+    t.string   "vehicleInfo"
+    t.string   "eeo1Form"
+    t.string   "disability"
+    t.string   "aap"
+    t.string   "labCoat"
+    t.string   "locker"
+    t.string   "trainingPapers"
+    t.string   "emergencyList"
+    t.string   "doorSystem"
+    t.string   "badge"
+    t.string   "traineeLog"
+    t.string   "completedBy"
+  end
+
+  create_table "change_of_employment", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.string   "dateCOE"
+    t.string   "ADP"
+    t.text     "typeCOE"
+    t.string   "fromTeam"
+    t.string   "fromPos"
+    t.string   "toTeam"
+    t.string   "toPos"
+    t.string   "teamLead"
+    t.string   "access"
+    t.string   "empStatusEmail"
+    t.string   "tlList"
+    t.string   "ADPComplete"
+    t.string   "ITticket"
+    t.string   "employeeFile"
+    t.string   "bonus"
+    t.string   "drugTestRCVD"
+    t.string   "review"
+    t.string   "retire401k"
+    t.string   "ultraBen"
+    t.string   "hsaBank"
+    t.string   "lincoln"
+    t.string   "colonialLife"
+    t.string   "ncsRCVD"
+    t.string   "sapSubmit"
+    t.string   "empContact"
+    t.string   "taxForm"
+    t.string   "vehicleInfo"
+    t.string   "eeo1Form"
+    t.string   "disability"
+    t.string   "aap"
+    t.string   "labCoat"
+    t.string   "locker"
+    t.string   "trainingPapers"
+    t.string   "emergencyList"
+    t.string   "doorSystem"
+    t.string   "badge"
+    t.string   "traineeLog"
+    t.string   "completedBy"
+  end
+
+  create_table "change_of_employments", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.string   "dateCOE"
+    t.string   "ADP"
+    t.text     "typeCOE"
+    t.string   "fromTeam"
+    t.string   "fromPos"
+    t.string   "toTeam"
+    t.string   "toPos"
+    t.string   "teamLead"
+    t.string   "access"
+    t.string   "empStatusEmail"
+    t.string   "tlList"
+    t.string   "ADPComplete"
+    t.string   "ITticket"
+    t.string   "employeeFile"
+    t.string   "bonus"
+    t.string   "drugTestRCVD"
+    t.string   "review"
+    t.string   "retire401k"
+    t.string   "ultraBen"
+    t.string   "hsaBank"
+    t.string   "lincoln"
+    t.string   "colonialLife"
+    t.string   "ncsRCVD"
+    t.string   "sapSubmit"
+    t.string   "empContact"
+    t.string   "taxForm"
+    t.string   "vehicleInfo"
+    t.string   "eeo1Form"
+    t.string   "disability"
+    t.string   "aap"
+    t.string   "labCoat"
+    t.string   "locker"
+    t.string   "trainingPapers"
+    t.string   "emergencyList"
+    t.string   "doorSystem"
+    t.string   "badge"
+    t.string   "traineeLog"
+    t.string   "completedBy"
+  end
 
   create_table "changes", force: :cascade do |t|
     t.string   "name"
@@ -61,6 +193,22 @@ ActiveRecord::Schema.define(version: 20211210153140) do
     t.string   "completedBy"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.string   "priority"
+    t.string   "partNumber"
+    t.string   "quantity"
+    t.string   "netPrice"
+    t.string   "materialGroup"
+    t.string   "costCenter"
+    t.string   "vendor"
+    t.string   "otherVendor"
+    t.string   "website"
+    t.string   "projectName"
+    t.string   "requestFor"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
 end

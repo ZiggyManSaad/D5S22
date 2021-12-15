@@ -1,10 +1,10 @@
 class OrdersController < ApplicationController
     def new
-      @orderForm = Orders.new
+      @orderForm = Order.new
     end
     
     def create
-    @orderForm = Orders.new(order_params)
+    @orderForm = Order.new(order_params)
       if @orderForm.save
         flash[:success] = "Message Sent"
         redirect_to new_order_path
@@ -15,6 +15,6 @@ class OrdersController < ApplicationController
     end
     private
       def order_params
-        params.require(:orders).permit(:partNumber, :quantity, :materialGroup, :costCenter, :vendor, :requestFor)
+        params.require(:order).permit(:partNumber, :quantity, :materialGroup, :costCenter, :vendor, :requestFor)
       end
 end

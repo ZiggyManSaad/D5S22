@@ -1,5 +1,6 @@
 class Order < ActiveRecord::Base
     validates :partNumber, presence: true
+    validates :quantity, presence: true
     validates :materialGroup, presence: true
     validates :costCenter, presence: true
     validates :vendor, presence: true

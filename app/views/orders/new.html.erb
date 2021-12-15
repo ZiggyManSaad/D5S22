@@ -9,8 +9,8 @@
         <% @vendors = ['123 Security Products', '8020.net', 'Air Inc.', 'AM Scope', 'Amazon', 'Aquadro Engineering', 'ArcSource', 'Athrex Inc.', 'B&H Photo', 'Beltron', 'Blick Art Material', 'Brierly Lombard', 'CDW', 'Cermark', 'Cyclone Manufacturing', 'Edmund Optics', 'Excell Solutions', 'Gesswein', 'Global Industrial', 'Grainger', 'Home Depot', 'HSW', 'HSW/Boeing', 'Hyperion', 'Industrial Tool Supply', 'Inlase LLC', 'JBC Tools', 'Jura-Parts.com', 'Laserstar Technologies 5005750', 'Manfrotto Distribution', 'McMaster', 'MEVA Manufacturing', 'Misumi USA', 'MSC', 'NITCO', 'Northeast Bio Tech', 'Northeast Engravers Supply', 'Ohlheiser', 'onlinelabels.com', 'Panacol-USA', 'Powers', 'Praxair', 'Quatro-Air', 'Replacement Parts Industries', 'Seton', 'Sherline', 'Smart Folks', 'Staples', 'Stryker', 'Stuller', 'T&D Specialties', 'Techni-Tool', 'The Mosher Co.', 'Thermo Fisher Scientific', 'TrippNT.com', 'Uline', 'Universal Photonics', 'Vatran Systems', 'Vitec', 'VWR', 'Walmart', 'Whalley', 'www.zoro.com', 'Other'] %>
         <% @requester = ['Alexander Zegarra', 'Austin Scott', 'Brad Chartier', 'Darren Mello', 'Deborah White', 'Jan Galczak (JG)', 'Jason Slauenwhite', 'Jessica Gauthier', 'Jonathon Mason', 'Randall Hess', 'Ronald Wennerberg', 'Tom Stilwell', 'Tommy Kowalczyk', 'Trevor Lewis'] %>
         <div class="form-group">
-          <%= f.label :priority, "Priority" %>
-          <%= f.text_field :priority, ['High', 'Low'], include_blank: true, class: 'form-control' %>
+          <%= f.label :priority, "Priority" %><br>
+          <%= f.select :priority, ['High', 'Low'], include_blank: true, class: 'form-control', placeholder: 'Select' %>
         </div>
         <div class="form-group">
           <%= f.label :partNumber, "Part Number" %>
@@ -22,19 +22,19 @@
         </div>
         <div class="form-group">
           <%= f.label :netPrice, "Net Price (USD)(per unit)" %>
-          <%= f.text_field :priority, class: 'form-control' %>
+          <%= f.text_field :netPrice, class: 'form-control' %>
         </div>
         <div class="form-group">
-          <%= f.label :materialGroup, "Mat'l Group" %>
-          <%= f.text_field :materialGroup, @matGroup, include_blank: true, class: 'form-control' %>
+          <%= f.label :materialGroup, "Mat'l Group" %><br>
+          <%= f.select :materialGroup, @matGroup, include_blank: true, class: 'form-control', placeholder: 'Select' %>
         </div>
         <div class="form-group">
-          <%= f.label :costCenter, "Cost Center/Work Order" %>
-          <%= f.text_field :costCenter, @costGroup, include_blank: true, class: 'form-control' %>
+          <%= f.label :costCenter, "Cost Center/Work Order" %><br>
+          <%= f.select :costCenter, @costGroup, include_blank: true, class: 'form-control', placeholder: 'Select' %>
         </div>
         <div class="form-group">
-          <%= f.label :vendor, "Cost Center/Work Order" %>
-          <%= f.text_field :vendor, @vendors, include_blank: true, class: 'form-control' %>
+          <%= f.label :vendor, "Vendor" %><br>
+          <%= f.select :vendor, @vendors, include_blank: true, class: 'form-control', placeholder: 'Select' %>
         </div>
         <div class="form-group">
           <%= f.label :otherVendor, "Other (vendor)" %>
@@ -49,12 +49,8 @@
           <%= f.text_field :projectName, class: 'form-control' %>
         </div>
         <div class="form-group">
-          <%= f.label :netPrice, "Net Price (USD)(per unit)" %>
-          <%= f.text_field :priority, class: 'form-control' %>
-        </div>
-        <div class="form-group">
-          <%= f.label :requestFor, "Requested For: " %>
-          <%= f.text_field :requestFor, @requester, include_blank: true, class: 'form-control' %>
+          <%= f.label :requestFor, "Requested For: " %><br>
+          <%= f.select :requestFor, @requester, include_blank: true, class: 'form-control'   %>
         </div>
         <%= f.submit 'Submit', class: 'btn btn-default' %>
         <% end %>

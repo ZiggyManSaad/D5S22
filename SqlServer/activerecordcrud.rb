@@ -5,9 +5,9 @@ require 'pp'
 
 ActiveRecord::Base.establish_connection(
   :adapter=> "sqlserver",
-  :host => "\D5S22",
-  :username => "production_admin",
-  :password => "MQz4y5Z0Me%H$Meexam9zZqx"
+  :host => '\D5S22',
+  :username => 'production_admin',
+  :password => 'MQz4y5Z0Me%H$Meexam9zZqx'
 )
 
 #Create new database SampleDB

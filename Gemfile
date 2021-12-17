@@ -57,7 +57,16 @@ end
 
 group :production do
   #Use PostgreSQL for production
-  gem 'pg', '0.18.4'
+  #gem 'pg', '0.18.4'
+
+  #Use Tiny TDS for production
+  gem 'tiny_tds'
+  
+  #Use Activerecord for database mapping
+  gem 'activerecord', '5.0.0'
+
+  #Use active-record-sqlserver-adapter
+  gem 'activerecord-sqlserver-adapter', '5.0.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

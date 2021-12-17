@@ -53,36 +53,43 @@
           <div class="form-group well">
               <%= f.label :access, "Access Needed" %>
               <br>
-              <%= check_box_tag(:activedirectoy) %>
+              <%= f.check_box :activedirectoy %>
               <%= f.label :activedirectoy, "PC Log On" %>
               &ensp;
-              <%= check_box_tag(:email) %>
+              <%= f.check_box :email %>
               <%= f.label :email, "Email Access" %>
               &ensp;
-              <%= check_box_tag(:SAPaccess) %>
+              <%= f.check_box :SAPaccess %>
               <%= f.label :SAPaccess, "SAP Access" %>
               &ensp;
-              <%= check_box_tag(:toolsfixtures) %>
+              <%= f.check_box :toolsfixtures %>
               <%= f.label :toolsfixtures, "Tools and Fixtures" %>
           </div>
           <div class="form-group well">
-              <%= f.label :equipment, "Equipment Needed" %>
-              <br>
-              <%= check_box_tag(:desktop) %>
+            <%= f.label :equipment, "Equipment Needed" %>
+            <br>
+            <div class=" checkbox-well wrap">
+              <div class="checkbox">
+              <%= f.check_box :desktop %>
               <%= f.label :desktop, "Desktop" %>
-              &ensp;
-              <%= check_box_tag(:Laptop) %>
+              </div>
+              <div class="checkbox">
+              <%= f.check_box :Laptop %>
               <%= f.label :Laptop, "Laptop" %>
-              &ensp;
-              <%= check_box_tag(:deskphone) %>
+              </div>
+              <div class="checkbox">
+              <%= f.check_box :deskphone %>
               <%= f.label :deskphone, "Desk Phone" %>
-              &ensp;
-              <%= check_box_tag(:cellphone) %>
+              </div>
+              <div class="checkbox">
+              <%= f.check_box :cellphone %>
               <%= f.label :cellphone, "Cell Phone" %>
-              &ensp;
-              <%= check_box_tag(:scanner) %>
+              </div>
+              <div class="checkbox">
+              <%= f.check_box :scanner %>
               <%= f.label :scanner, "Scanner" %>
-              
+              </div>
+            </div>
           </div>
           <!-- Insert HR Checklist boxes here -->
           <div class="form-group well">
@@ -90,115 +97,115 @@
             <br>
             <div class=" checkbox-well wrap">
               <div class="checkbox">
-              <%= check_box_tag(:empStatusEmail) %>
-              <%= f.label :empStatusEmail, "Employment Status Email" %>&ensp;
+              <%= f.check_box :empStatusEmail %>
+              <%= f.label :empStatusEmail, "Employment Status Email" %>
               </div>
               <div class="checkbox">
-              <%= check_box_tag(:tlList) %>
-              <%= f.label :tlList, "TL List" %>&ensp;
+              <%= f.check_box :tlList %>
+              <%= f.label :tlList, "TL List" %>
               </div>
               <div class="checkbox">
-              <%= check_box_tag(:ADPComplete) %>
-              <%= f.label :ADPComplete, "ADP" %>&ensp;
+              <%= f.check_box :ADPComplete %>
+              <%= f.label :ADPComplete, "ADP" %>
               </div>
               <div class="checkbox">
-              <%= check_box_tag(:ITticket) %>
-              <%= f.label :ITticket, "IT Ticket submitted" %>&ensp;
+              <%= f.check_box :ITticket %>
+              <%= f.label :ITticket, "IT Ticket submitted" %>
               </div>
               <div class="checkbox">
-              <%= check_box_tag(:employeeFile) %>
-              <%= f.label :employeeFile, "Employee File Created" %>&ensp;
+              <%= f.check_box :employeeFile %>
+              <%= f.label :employeeFile, "Employee File Created" %>
               </div>
               <div class="checkbox">
-              <%= check_box_tag(:bonus) %>
-              <%= f.label :bonus, "Bonus" %>&ensp;
+              <%= f.check_box :bonus %>
+              <%= f.label :bonus, "Bonus" %>
               </div>
               <div class="checkbox">
-              <%= check_box_tag(:drugTestRCVD) %>
-              <%= f.label :drugTestRCVD, "Drug Test RCVD" %>&ensp;
+              <%= f.check_box :drugTestRCVD %>
+              <%= f.label :drugTestRCVD, "Drug Test RCVD" %>
               </div>
               <div class="checkbox">
-              <%= check_box_tag(:review) %>
-              <%= f.label :review, "Review" %>&ensp;
+              <%= f.check_box :review %>
+              <%= f.label :review, "Review" %>
               </div>
               <div class="checkbox">
-              <%= check_box_tag(:retire401k) %>
-              <%= f.label :retire401k, "401K Paperwork" %>&ensp;
+              <%= f.check_box :retire401k %>
+              <%= f.label :retire401k, "401K Paperwork" %>
               </div>
               <div class="checkbox">
-              <%= check_box_tag(:ultraBen) %>
-              <%= f.label :ultraBen, "Ultra Ben" %>&ensp;
+              <%= f.check_box :ultraBen %>
+              <%= f.label :ultraBen, "Ultra Ben" %>
               </div>
               <div class="checkbox">
-              <%= check_box_tag(:hsaBank) %>
-              <%= f.label :hsaBank, "HSA Bank" %>&ensp;
+              <%= f.check_box :hsaBank %>
+              <%= f.label :hsaBank, "HSA Bank" %>
               </div>
               <div class="checkbox">
-              <%= check_box_tag(:lincoln) %>
-              <%= f.label :lincoln, "Lincoln" %>&ensp;
+              <%= f.check_box :lincoln  %>
+              <%= f.label :lincoln, "Lincoln" %>
               </div>
               <div class="checkbox">
-              <%= check_box_tag(:colonialLife) %>
-              <%= f.label :colonialLife, "Colonial Life" %>&ensp;
+              <%= f.check_box :colonialLife %>
+              <%= f.label :colonialLife, "Colonial Life" %>
               </div>
               <div class="checkbox">
-              <%= check_box_tag(:ncsRCVD) %>
-              <%= f.label :ncsRCVD, "NCS RCVD" %>&ensp;
+              <%= f.check_box :ncsRCVD %>
+              <%= f.label :ncsRCVD, "NCS RCVD" %>
               </div>
               <div class="checkbox">
-              <%= check_box_tag(:sapSubmit) %>
-              <%= f.label :sapSubmit, "SAP App Submitted" %>&ensp;
+              <%= f.check_box :sapSubmit %>
+              <%= f.label :sapSubmit, "SAP App Submitted" %>
               </div>
               <div class="checkbox">
-              <%= check_box_tag(:empContact) %>
-              <%= f.label :empContact, "Employee Contact Info" %>&ensp;
+              <%= f.check_box :empContact %>
+              <%= f.label :empContact, "Employee Contact Info" %>
               </div>
               <div class="checkbox">
-              <%= check_box_tag(:taxForm) %>
-              <%= f.label :taxForm, "Tax Info" %>&ensp;
+              <%= f.check_box :taxForm %>
+              <%= f.label :taxForm, "Tax Info" %>
               </div>
               <div class="checkbox">
-              <%= check_box_tag(:vehicleInfo) %>
-              <%= f.label :vehicleInfo, "Vehicle Info" %>&ensp;
+              <%= f.check_box :vehicleInfo %>
+              <%= f.label :vehicleInfo, "Vehicle Info" %>
               </div>
               <div class="checkbox">
-              <%= check_box_tag(:eeo1Form) %>
-              <%= f.label :eeo1Form, "EEO-1 Form" %>&ensp;
+              <%= f.check_box:eeo1Form %>
+              <%= f.label :eeo1Form, "EEO-1 Form" %>
               </div>
               <div class="checkbox">
-              <%= check_box_tag(:disability) %>
-              <%= f.label :disability, "Disability Self ID" %>&ensp;
+              <%= f.check_box :disability %>
+              <%= f.label :disability, "Disability Self ID" %>
               </div>
               <div class="checkbox">
-              <%= check_box_tag(:aap) %>
-              <%= f.label :aap, "AAP" %>&ensp;
+              <%= f.check_box :aap %>
+              <%= f.label :aap, "AAP" %>
               </div>
               <div class="checkbox">
-              <%= check_box_tag(:labCoat) %>
-              <%= f.label :labCoat, "Lab Coat Assigned" %>&ensp;
+              <%= f.check_box :labCoat %>
+              <%= f.label :labCoat, "Lab Coat Assigned" %>
               </div>
               <div class="checkbox">
-              <%= check_box_tag(:locker) %>
-              <%= f.label :locker, "Locker Assigned" %>&ensp;
+              <%= f.check_box :locker %>
+              <%= f.label :locker, "Locker Assigned" %>
               </div>
               <div class="checkbox">
-              <%= check_box_tag(:trainingPapers) %>
-              <%= f.label :trainingPapers, "Training Papers" %>&ensp;
+              <%= f.check_box :trainingPapers %>
+              <%= f.label :trainingPapers, "Training Papers" %>
               </div>
               <div class="checkbox">
-              <%= check_box_tag(:emergencyList) %>
-              <%= f.label :emergencyList, "Emergency Contact List" %>&ensp;
+              <%= f.check_box :emergencyList %>
+              <%= f.label :emergencyList, "Emergency Contact List" %>
               </div>
               <div class="checkbox">
-              <%= check_box_tag(:doorSystem) %>
-              <%= f.label :doorSystem, "Door System" %>&ensp;
+              <%= f.check_box :doorSystem %>
+              <%= f.label :doorSystem, "Door System" %>
               </div>
               <div class="checkbox">
-              <%= check_box_tag(:badge) %>
-              <%= f.label :badge, "ID Badge Printed" %>&ensp;
+              <%= f.check_box :badge %>
+              <%= f.label :badge, "ID Badge Printed" %>
               </div>
               <div class="checkbox">
-              <%= check_box_tag(:traineeLog) %>
+              <%= f.check_box :traineeLog %>
               <%= f.label :traineeLog, "Trainee Log" %>
               </div>
             </div>

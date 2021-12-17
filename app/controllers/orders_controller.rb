@@ -15,6 +15,6 @@ class OrdersController < ApplicationController
     end
     private
       def order_params
-        params.require(:order).permit(:partNumber, :quantity, :materialGroup, :costCenter, :vendor, :requestFor)
+        params.require(:order).permit(:priorty, :partNumber, :quantity, :netPrice, :materialGroup, :costCenter, :vendor, :webiste, :projectName, :requestFor)
       end
 end

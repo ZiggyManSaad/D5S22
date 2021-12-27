@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<h1>A new Change of Employment has been submitted</h1>
+<p>A Change for <%=  "#{ @name }"  %> has been submitted on <%= "#{ @dateToday }" %>.</p>
+<p>The date of the Change is scheduled for <%= "#{ @dateCOE }" %>.</p>
+<p>ADP Number: <%= @ADP %></p>
+<p>CoE Type: <%= @typeCOE  %></p>
+<p>From Team: <%= @fromTeam %></p>
+<p>From Position: <%= @fromPos %></p>
+<br>
+<p>To Team: <%= @toTeam %></p>
+<p>To Position: <%= @toPos %></p>
+<br>
+<p>Team Lead: <%= @teamLead %></p>
+<br>
+<p>Access Needed: <%= "#{ @activedirectory }" "#{ @email }" "#{ @SAPaccess }" "#{ @toolsfixtures }" %></p>
+<br>
+<p>Equipment Needed: <%= "#{ @desktop }" "#{ @Laptop }" "#{ @deskphone }" "#{ @cellphone }" "#{ @scanner }" %></p>
+<br><br>
+<p>HR Checklist <%= "#{ @empStatusEmail }" "#{ @ADP }" "#{ @ITticket }" "#{ @employeeFile }" "#{ @bonus }" "#{ @drugTestRCVD }" "#{ @review }" "#{ @medical }" "#{ @dental }" "#{ @voluntary }" "#{ @hsaBank }" "#{ @ncsRCVD }" "#{ @sapSubmit }" "#{ @vehicleInfo }" "#{ @eeo1Form }" "#{ @disability }" "#{ @aap }" "#{ @labCoat }" "#{ @locker }" "#{ @trainingPapers }" "#{ @emergencyList }" "#{ @doorSystem }" "#{ @badge }" "#{ @traineeLog }" %></p>
+<br><br>
+<p>This CoE was completed by: <%= @completedBy %></p>
+</body>
+</html>

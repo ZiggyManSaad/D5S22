@@ -5,4 +5,7 @@ class Order < ActiveRecord::Base
     validates :costCenter, presence: true
     validates :vendor, presence: true
     validates :requestFor, presence: true
+
+    
+    
 end

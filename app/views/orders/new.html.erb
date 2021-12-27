@@ -10,7 +10,7 @@
         <% @requester = ['Alexander Zegarra', 'Austin Scott', 'Brad Chartier', 'Darren Mello', 'Deborah White', 'Jan Galczak (JG)', 'Jason Slauenwhite', 'Jessica Gauthier', 'Jonathon Mason', 'Randall Hess', 'Ronald Wennerberg', 'Tom Stilwell', 'Tommy Kowalczyk', 'Trevor Lewis'] %>
         <div class="form-group">
           <%= f.label :priority, "Priority" %><br>
-          <%= f.select :priority, ['High', 'Low'], include_blank: true, class: 'form-control', placeholder: 'Select' %>
+          <%= f.select :priority, ['Low', 'High'], class: 'form-control' %>
         </div>
         <div class="form-group">
           <%= f.label :partNumber, "Part Number" %>
@@ -26,15 +26,15 @@
         </div>
         <div class="form-group">
           <%= f.label :materialGroup, "Mat'l Group" %><br>
-          <%= f.select :materialGroup, @matGroup, include_blank: true, class: 'form-control', placeholder: 'Select' %>
+          <%= f.select :materialGroup, @matGroup, include_blank: true, class: 'form-control' %>
         </div>
         <div class="form-group">
           <%= f.label :costCenter, "Cost Center/Work Order" %><br>
-          <%= f.select :costCenter, @costGroup, include_blank: true, class: 'form-control', placeholder: 'Select' %>
+          <%= f.select :costCenter, @costGroup, include_blank: true, class: 'form-control' %>
         </div>
         <div class="form-group">
           <%= f.label :vendor, "Vendor" %><br>
-          <%= f.select :vendor, @vendors, include_blank: true, class: 'form-control', placeholder: 'Select' %>
+          <%= f.select :vendor, @vendors, include_blank: true, class: 'form-control' %>
         </div>
         <div class="form-group">
           <%= f.label :otherVendor, "Other (vendor)" %>

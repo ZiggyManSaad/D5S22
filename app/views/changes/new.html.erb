@@ -10,12 +10,12 @@
         <% @position_array = [ ['Accounting & Customer Service Support'], ['Accounting Manager'], ['Buyer/ Planner'], ['CNC Programmer-Tool & Fix Coord'], ['Couplers'], ['Customer Service Supervisor'], ['Data Entry'], ['Deputy'], ['Deputy- Finalist'], ['Deputy- Stockroom'], ['Director of Finance And Controlling'], ['Director of Production'], ['Director Of Quality, ASQ CQE & CMQ/OE'], ['Director Of Sales & Customer Service'], ['Disassembler/Allocator'], ['Engineering Intern'], ['Engineering Manager'], ['Eval'], ['Evaluation Assistant Coordinator'], ['Final QC Inspector'], ['Finalist'], ['Human Resources Coordinator'], ['Human Resources Generalist'], ['Human Resources Manager'], ['Inner Tubes'], ['Inner Tubes Coordinator'], ['Inner Tubes/Final'], ['IT Manager'], ['IT Support Specialist'], ['Janitor'], ['Lead Design Engineer'], ['Logistics Flow Team Member'], ['Machinist Intern'], ['Maintenance Manager & Safety Officer'], ['Maintenance Technician'], ['Maintenance Technician/Facilities'], ['Mechanical Designer'], ['OT Coordinator'], ['Outer Tubes'], ['Process Development Tech/Trainer TL'], ['Process Development Technician'], ['Production Scheduler & Metrics Analyst'], ['Quality Assurance Coordinator'], ['Quality Control Coordinator'], ['Quality Technician'], ['Receptionist'], ['Salvage'], ['Senior Assembly Technician'], ['Stockroom Clerk'], ['Team Deputy- Logistics Flow'], ['Team Leader'], ['Teamleader- Finalist'], ['Teamleader- Logistics Flow'], ['Teamleader- Salvage'], ['Teamleader- Stockroom Clerk'], ['Teamleader- Welding'], ['Tool Crib Attendant'], ['Tooling & Fixtures Maintenance Tech'], ['Vice President Of Operations'], ['VP of Sales'], ['Welder'] ] %>
         
           <div class="form-group">
-              <%= f.label :name %>
+              <%= f.label :name, "Name" %>
               <%= f.text_field :name, class: 'form-control' %>
           </div>
           <div class="form-group">
               <%= f.label :dateToday, "Today's Date" %>
-              <%= f.date_field :dateToday, class: 'form-control'  %>
+              <%= f.date_field :dateToday, value: Date.today, class: 'form-control'  %>
           </div>
           <div class="form-group">
               <%= f.label :dateCOE, "Date of COE" %>
@@ -53,159 +53,138 @@
           <div class="form-group well">
               <%= f.label :access, "Access Needed" %>
               <br>
-              <%= f.check_box :activedirectoy %>
+              <%= f.check_box :activedirectoy, {class: 'form-check-input'}, "no", "yes" %>
               <%= f.label :activedirectoy, "PC Log On" %>
               &ensp;
-              <%= f.check_box :email %>
+              <%= f.check_box :email, {class: 'form-check-input'}, "no", "yes" %>
               <%= f.label :email, "Email Access" %>
               &ensp;
-              <%= f.check_box :SAPaccess %>
+              <%= f.check_box :SAPaccess, {class: 'form-check-input'}, "no", "yes" %>
               <%= f.label :SAPaccess, "SAP Access" %>
               &ensp;
-              <%= f.check_box :toolsfixtures %>
+              <%= f.check_box :toolsfixtures, {class: 'form-check-input'}, "no", "yes" %>
               <%= f.label :toolsfixtures, "Tools and Fixtures" %>
           </div>
+          <!-- Equipment needed -->
           <div class="form-group well">
             <%= f.label :equipment, "Equipment Needed" %>
             <br>
-            <div class=" checkbox-well wrap">
-              <div class="checkbox">
-              <%= f.check_box :desktop %>
+            
+              <%= f.check_box :desktop, {class: 'form-check-input'}, "no", "yes" %>
               <%= f.label :desktop, "Desktop" %>
-              </div>
-              <div class="checkbox">
-              <%= f.check_box :Laptop %>
+              &ensp;
+              <%= f.check_box :Laptop, {class: 'form-check-input'}, "no", "yes" %>
               <%= f.label :Laptop, "Laptop" %>
-              </div>
-              <div class="checkbox">
-              <%= f.check_box :deskphone %>
+              &ensp;
+              <%= f.check_box :deskphone, {class: 'form-check-input'}, "no", "yes" %>
               <%= f.label :deskphone, "Desk Phone" %>
-              </div>
-              <div class="checkbox">
-              <%= f.check_box :cellphone %>
+              &ensp;
+              <%= f.check_box :cellphone, {class: 'form-check-input'}, "no", "yes" %>
               <%= f.label :cellphone, "Cell Phone" %>
-              </div>
-              <div class="checkbox">
-              <%= f.check_box :scanner %>
+              &ensp;
+              <%= f.check_box :scanner, {class: 'form-check-input'}, "no", "yes" %>
               <%= f.label :scanner, "Scanner" %>
-              </div>
-            </div>
+              
           </div>
           <!-- Insert HR Checklist boxes here -->
           <div class="form-group well">
             <%= f.label :HRChecklist, "HR Checklist", class: 'strong' %>
             <br>
-            <div class=" checkbox-well wrap">
-              <div class="checkbox">
-              <%= f.check_box :empStatusEmail %>
+            <div class="form-check wrap">
+              <div>
+              <%= f.check_box :empStatusEmail, {class: 'form-check-input'}, "no", "yes" %>
               <%= f.label :empStatusEmail, "Employment Status Email" %>
               </div>
-              <div class="checkbox">
-              <%= f.check_box :tlList %>
-              <%= f.label :tlList, "TL List" %>
-              </div>
-              <div class="checkbox">
-              <%= f.check_box :ADPComplete %>
+              <div>
+              <%= f.check_box :ADPComplete, {class: 'form-check-input'}, "no", "yes" %>
               <%= f.label :ADPComplete, "ADP" %>
               </div>
-              <div class="checkbox">
-              <%= f.check_box :ITticket %>
+              <div>
+              <%= f.check_box :ITticket, {class: 'form-check-input'}, "no", "yes" %>
               <%= f.label :ITticket, "IT Ticket submitted" %>
               </div>
-              <div class="checkbox">
-              <%= f.check_box :employeeFile %>
+              <div>
+              <%= f.check_box :employeeFile, {class: 'form-check-input'}, "no", "yes" %>
               <%= f.label :employeeFile, "Employee File Created" %>
               </div>
-              <div class="checkbox">
-              <%= f.check_box :bonus %>
-              <%= f.label :bonus, "Bonus" %>
+              <div>
+              <%= f.check_box :bonus, {class: 'form-check-input'}, "no", "yes" %>
+              <%= f.label :bonus, "Bonus Structure" %>
               </div>
-              <div class="checkbox">
-              <%= f.check_box :drugTestRCVD %>
-              <%= f.label :drugTestRCVD, "Drug Test RCVD" %>
+              <div>
+              <%= f.check_box :drugTestRCVD, {class: 'form-check-input'}, "no", "yes" %>
+              <%= f.label :drugTestRCVD, "Drug Test Received" %>
               </div>
-              <div class="checkbox">
-              <%= f.check_box :review %>
+              <div>
+              <%= f.check_box :review, {class: 'form-check-input'}, "no", "yes" %>
               <%= f.label :review, "Review" %>
               </div>
-              <div class="checkbox">
-              <%= f.check_box :retire401k %>
-              <%= f.label :retire401k, "401K Paperwork" %>
+              <div>
+              <%= f.check_box :medical, {class: 'form-check-input'}, "no", "yes" %>
+              <%= f.label :medical, "Medical" %>
               </div>
-              <div class="checkbox">
-              <%= f.check_box :ultraBen %>
-              <%= f.label :ultraBen, "Ultra Ben" %>
+              <div>
+              <%= f.check_box :dental, {class: 'form-check-input'}, "no", "yes" %>
+              <%= f.label :dental, "Dental" %>
               </div>
-              <div class="checkbox">
-              <%= f.check_box :hsaBank %>
-              <%= f.label :hsaBank, "HSA Bank" %>
+              <div>
+              <%= f.check_box :voluntary, {class: 'form-check-input'}, "no", "yes" %>
+              <%= f.label :voluntary, "Voluntary" %>
               </div>
-              <div class="checkbox">
-              <%= f.check_box :lincoln  %>
-              <%= f.label :lincoln, "Lincoln" %>
+              <div>
+              <%= f.check_box :hsaBank, {class: 'form-check-input'}, "no", "yes" %>
+              <%= f.label :hsaBank, "HSA" %>
               </div>
-              <div class="checkbox">
-              <%= f.check_box :colonialLife %>
-              <%= f.label :colonialLife, "Colonial Life" %>
+              <div>
+              <%= f.check_box :ncsRCVD, {class: 'form-check-input'}, "no", "yes" %>
+              <%= f.label :ncsRCVD, "NCS Received" %>
               </div>
-              <div class="checkbox">
-              <%= f.check_box :ncsRCVD %>
-              <%= f.label :ncsRCVD, "NCS RCVD" %>
-              </div>
-              <div class="checkbox">
-              <%= f.check_box :sapSubmit %>
+              <div>
+              <%= f.check_box :sapSubmit, {class: 'form-check-input'}, "no", "yes" %>
               <%= f.label :sapSubmit, "SAP App Submitted" %>
               </div>
-              <div class="checkbox">
-              <%= f.check_box :empContact %>
-              <%= f.label :empContact, "Employee Contact Info" %>
-              </div>
-              <div class="checkbox">
-              <%= f.check_box :taxForm %>
-              <%= f.label :taxForm, "Tax Info" %>
-              </div>
-              <div class="checkbox">
-              <%= f.check_box :vehicleInfo %>
+              <div>
+              <%= f.check_box :vehicleInfo, {class: 'form-check-input'}, "no", "yes" %>
               <%= f.label :vehicleInfo, "Vehicle Info" %>
               </div>
-              <div class="checkbox">
-              <%= f.check_box:eeo1Form %>
+              <div>
+              <%= f.check_box :eeo1Form, {class: 'form-check-input'}, "no", "yes" %>
               <%= f.label :eeo1Form, "EEO-1 Form" %>
               </div>
-              <div class="checkbox">
-              <%= f.check_box :disability %>
+              <div>
+              <%= f.check_box :disability, {class: 'form-check-input'}, "no", "yes" %>
               <%= f.label :disability, "Disability Self ID" %>
               </div>
-              <div class="checkbox">
-              <%= f.check_box :aap %>
+              <div>
+              <%= f.check_box :aap, {class: 'form-check-input'}, "no", "yes" %>
               <%= f.label :aap, "AAP" %>
               </div>
-              <div class="checkbox">
-              <%= f.check_box :labCoat %>
+              <div>
+              <%= f.check_box :labCoat, {class: 'form-check-input'}, "no", "yes" %>
               <%= f.label :labCoat, "Lab Coat Assigned" %>
               </div>
-              <div class="checkbox">
-              <%= f.check_box :locker %>
+              <div>
+              <%= f.check_box :locker, {class: 'form-check-input'}, "no", "yes" %>
               <%= f.label :locker, "Locker Assigned" %>
               </div>
-              <div class="checkbox">
-              <%= f.check_box :trainingPapers %>
+              <div>
+              <%= f.check_box :trainingPapers, {class: 'form-check-input'}, "no", "yes" %>
               <%= f.label :trainingPapers, "Training Papers" %>
               </div>
-              <div class="checkbox">
-              <%= f.check_box :emergencyList %>
+              <div>
+              <%= f.check_box :emergencyList, {class: 'form-check-input'}, "no", "yes" %>
               <%= f.label :emergencyList, "Emergency Contact List" %>
               </div>
-              <div class="checkbox">
-              <%= f.check_box :doorSystem %>
+              <div>
+              <%= f.check_box :doorSystem, {class: 'form-check-input'}, "no", "yes" %>
               <%= f.label :doorSystem, "Door System" %>
               </div>
-              <div class="checkbox">
-              <%= f.check_box :badge %>
+              <div>
+              <%= f.check_box :badge, {class: 'form-check-input'}, "no", "yes" %>
               <%= f.label :badge, "ID Badge Printed" %>
               </div>
-              <div class="checkbox">
-              <%= f.check_box :traineeLog %>
+              <div>
+              <%= f.check_box :traineeLog, {class: 'form-check-input'}, "no", "yes" %>
               <%= f.label :traineeLog, "Trainee Log" %>
               </div>
             </div>

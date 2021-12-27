@@ -19,6 +19,7 @@ class CreateChanges < ActiveRecord::Migration[5.0]
       t.string :Laptop
       t.string :deskphone
       t.string :cellphone
+      t.string :scanner
       t.string :empStatusEmail
       t.string :tlList
       t.string :ADPComplete
@@ -27,11 +28,11 @@ class CreateChanges < ActiveRecord::Migration[5.0]
       t.string :bonus
       t.string :drugTestRCVD
       t.string :review
-      t.string :retire401k
+      t.string :voluntary
       t.string :ultraBen
       t.string :hsaBank
-      t.string :lincoln
-      t.string :colonialLife
+      t.string :medical
+      t.string :dental
       t.string :ncsRCVD
       t.string :sapSubmit
       t.string :empContact
@@ -44,6 +45,7 @@ class CreateChanges < ActiveRecord::Migration[5.0]
       t.string :locker
       t.string :trainingPapers
       t.string :emergencyList
+      t.string :doorSystem
       t.string :badge
       t.string :traineeLog
       t.string :completedBy

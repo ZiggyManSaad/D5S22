@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <p>You have a new order from 
+    <%= "#{ @requestFor }" %> </p>
+    <p>Priority Marked : <%= @priorty %></p>
+    <p><%= "#{ @requestFor }" %> has requested <%= "#{ @quantity }" %> of <%= "#{ @partNumber }" %>.</p>
+    <p>The price is <%= "#{ @netPrice }" %> from <%= "#{ @vendor} #{ @otherVendor}" %>.</p>
+    <p>Source : <%= @website  %></p>
+    <p>Material Group : <%=  @materialGroup  %></p>
+    <p>Cost Center : <%=  @costCenter  %></p>
+    <p>Project Name : <%=  @projectName  %></p>
+  </body>
+</html>
